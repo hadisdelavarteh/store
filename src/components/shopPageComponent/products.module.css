@@ -1,0 +1,20 @@
+body{
+    background-color: #fff;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 40px auto 0;
+}
+
+@media( max-width: 860px ){
+    div.products{
+        width: 100%;
+        margin: 40px 10px 0;
+    }
+}
+
+

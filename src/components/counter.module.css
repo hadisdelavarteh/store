@@ -1,0 +1,18 @@
+.addToCard{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.addToCard svg{
+    background-color: var(--yellow);
+    color: var(--darkBlue);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 6px 2px;
+    height: 10px;
+}
+
+.addToCard svg:hover{
+    background-color: var(--yellowHover);
+}

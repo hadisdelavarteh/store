@@ -1,0 +1,108 @@
+form > div{
+    display: grid;
+    margin-bottom: 5px;
+}
+.sign_up{
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin: 50px auto;
+}
+
+.sign_up h1{
+    color: var(--darkBlue);
+    font-size: 18px;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.sign_up label{
+    font-size: 10px;
+}
+
+.sign_up input{
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    padding: 3px 8px;
+    outline: none;
+    z-index: 2;
+}
+
+.sign_up input:focus{
+    border: solid 1px rgb(0, 140, 255) !important;
+    border-top: none !important;
+    box-shadow: 3px 3px 10px -2px #e5e5e5;
+}
+
+.border_error{
+    border: solid 1px #ee384e !important;
+    border-top: none !important;
+    box-shadow: 3px 3px 10px -2px #e5e5e5;
+}
+
+.accept{
+    display: inline-flex;
+}
+
+.accept input{
+    width: 15px !important;
+    float: right;
+}
+
+.accept label{
+    display: inherit;
+}
+
+.formButton{
+    margin: 15px 0 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.accept label{
+    padding-top: 3px;
+}
+
+.login{
+    float: right;
+    color: var(--darkBlue);
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.login:hover{
+    color: var(--darkBlueHover);
+}
+
+.error {
+    color: red;
+    font-size: 8px;
+    margin: 0;
+    background-color: #ff000014;
+    text-align: right;
+    margin-top: -3px !important;
+    display: block;
+}
+
+.error_input{
+    border: 1px solid red !important;
+}
+
+.forgetPassword a{
+    color: rgba(4, 175, 255, 0.986);
+    font-size: 9px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media(max-width: 400px){
+    .sign_up{
+        width: 70%;
+    }
+}

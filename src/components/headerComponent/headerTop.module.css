@@ -1,0 +1,21 @@
+.header_top{
+    background-color: var(--darkBlue);
+    text-align: right;
+    padding: 3px 10px;
+}
+
+.header_top svg{
+    margin: 0 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.header_top svg:hover{
+    color: var(--yellow);
+}
+
+@media( max-width: 860px ){
+    .header_top{
+        text-align: center;
+    }
+}

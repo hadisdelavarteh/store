@@ -1,0 +1,27 @@
+body{
+    --yellow: #ffa826;
+    --yellowHover: #f7a427;
+    --darkBlue: #00013a;
+    --darkBlueHover: #060027;
+    --background: #00013a1a;
+}
+
+button{
+    float: left;
+    color: #fff;
+    background-color: var(--yellow);
+    border: none;
+    margin-left: 6px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--yellowHover);
+}
+
+a{
+    text-decoration: none;
+}

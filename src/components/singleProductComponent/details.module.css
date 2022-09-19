@@ -1,0 +1,114 @@
+.details{
+    display: flex;
+    padding: 50px 20px 0;
+}
+
+.details .image{
+    width: 30%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.details .image img{
+    width: -webkit-fill-available;
+}
+
+.box_description{
+    width: 40%;
+}
+
+.box_card{
+    width: 30%;
+    min-height: 200px;
+    position: relative;
+    box-shadow: 0 0 12px 6px #eeeeee6b;
+    margin: 0 50px;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.box_description .title{
+    color: var(--yellow);
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.box_description .description{
+    text-align: justify;
+}
+
+.box_description .rating{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 11px;
+    align-items: center;
+}
+
+.box_description .rating div svg,
+.color{
+    color: var(--yellow);
+}
+
+.box_description .rating div{
+    border-right: solid 1px #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.box_card > div,
+.box_card p{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.box_card > div >div{
+    width: fit-content;
+}
+
+.box_card >div span{
+    padding-top: 3px;
+}
+
+.box_card button{
+    width: 80%;
+    position: absolute;
+    bottom: 10px;
+    margin: 0;
+}
+
+@media (max-width: 860px){
+    .box_card{
+        margin: 0 10px
+    }
+
+    .details .image{
+        padding-right: 10px;
+    }
+}
+
+@media( max-width: 650px ){
+    .details{
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
+
+    .box_card,
+    .box_description,
+    .details .image{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .details .image{
+        text-align: center;
+    }
+
+    .details .image img{
+        width: 200px;
+    }
+}
