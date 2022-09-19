@@ -3,7 +3,6 @@ import SignUp from './components/login&signupComponent/SignUp';
 import Login from './components/login&signupComponent/Login';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import SingleProduct from './components/singleProductComponent/SingleProduct';
-import Home from './components/homePageComponent/Home';
 import './app.css';
 import ProductContexProvider from './contex/ProductContexProvider';
 import Products from './components/shopPageComponent/Products';
