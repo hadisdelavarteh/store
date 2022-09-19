@@ -7,8 +7,7 @@ import './app.css';
 import ProductContexProvider from './contex/ProductContexProvider';
 import Products from './components/shopPageComponent/Products';
 
-
-const App = () => {
+const App = () => { console.log("hi")
   return (
     <div>
         <ProductContexProvider>
