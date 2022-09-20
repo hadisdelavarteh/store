@@ -69,12 +69,14 @@
 .footer{
     border-top: solid 1px #eee;
     width: 100%;
+    justify-content: space-between;
     display: flex;
     align-items: center;
 }
 
 .footer a{
     color: var(--yellow);
+    font-size: 14px;
 }
 
 .footer a:hover{

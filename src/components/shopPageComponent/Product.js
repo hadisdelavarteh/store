@@ -4,7 +4,7 @@ import styles from './product.module.css'
 import {BsFillStarFill} from 'react-icons/bs'
 import Counter from '../Counter';
 import { shorter } from '../../helper/functions';
-
+ 
 const Product = ({product}) => {
 
     return (
@@ -24,7 +24,7 @@ const Product = ({product}) => {
             </div>
             <div className={styles.footer}>
                 <Link to={`/products/${product.id}`}>Detiles</Link>
-                <Counter />
+                <Counter product={product} />
             </div>
         </div>
     );
