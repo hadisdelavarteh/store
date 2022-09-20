@@ -1,26 +1,25 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { BiTrash } from 'react-icons/bi';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import styles from './counter.module.css';
+import {contextCart} from '../contex/CartContextProvider';
+import { selectedProduct, numberQuantity, oneOrGreater } from '../helper/functions';
 
-const Counter = () => {
+const Counter = ({product}) => {
     
-    const [count, setCount] = useState(0);
-
-    const clickHandler = (type) => {
-        type === "plus" ?
-        setCount(prevState => prevState+1):
-        setCount(prevState => prevState-1)
-    }
-
+    const {state, dispatch} = useContext(contextCart);
+    console.log(oneOrGreater(state, product.id));
     return (
-        <div className={styles.addToCard}>
-            {count === 1 ? 
-              <BiTrash /> : 
-              <AiOutlineMinus onClick={() => clickHandler("min")}/>
+        <div className={styles.addToCart}>
+            {selectedProduct(state, product.id) ?
+                <AiOutlinePlus onClick={() => dispatch({type: "INC_ITEM", payload: product})} />:
+                <button onClick={() => dispatch({type: "ADD_ITEM", payload: product})}>Add Item</button>
             }
-            <span>{count}</span>
-            <AiOutlinePlus onClick={() => clickHandler("plus")}/>
+            <span>{numberQuantity(state, product.id)}</span>
+            {(selectedProduct(state, product.id)) && (oneOrGreater(state, product.id) ?
+                <BiTrash onClick={() => dispatch({type: "REMOVE_ITEM", payload: product})} /> : 
+                <AiOutlineMinus onClick={() => dispatch({type: "DEC_ITEM", payload: product})}/>)
+            }
         </div>
     );
 };
