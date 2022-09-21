@@ -7,6 +7,7 @@ import './app.css';
 import ProductContexProvider from './contex/ProductContexProvider';
 import Products from './components/shopPageComponent/Products';
 import CartContextComponent from './contex/CartContextProvider';
+import Cart from './components/cartComponent/Cart';
 
 const App = () => {
 
@@ -19,6 +20,7 @@ const App = () => {
               <Route path='/login' component={Login} />
               <Route path='/products/:id' component={SingleProduct} />
               <Route path='/products' component={Products} />
+              <Route path='/cart' component={Cart} />
               <Redirect to='/Products' />
             </Switch>
           </CartContextComponent>

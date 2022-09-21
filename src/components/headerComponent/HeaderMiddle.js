@@ -16,7 +16,7 @@ const HeaderMiddle = () => {
         setToggleMenu ( prevState => !prevState);
     }
     const toggleSearchHandler = () => {
-        setToggleSearch ( prevState => !prevState); console.log(toggleSearch);
+        setToggleSearch ( prevState => !prevState);
     }
     
 
@@ -53,7 +53,9 @@ const HeaderMiddle = () => {
                         <div>
                             <span>0</span>
                         </div>
-                        <MdOutlineShoppingCart />
+                        <Link to="/cart">
+                            <MdOutlineShoppingCart />
+                        </Link>
                     </div>
                     <Link to="/login"> <button>Login / Sign Up</button> </Link>
                 </div>

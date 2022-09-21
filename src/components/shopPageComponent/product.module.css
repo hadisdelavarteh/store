@@ -83,3 +83,27 @@
     text-decoration: underline;
     color: var(--yellowHover);
 }
+
+.addToCart{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.addToCart svg{
+    background-color: var(--yellow);
+    color: #fff;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.addToCart svg:hover{
+    background-color: var(--yellowHover);
+}
+
+.addToCart button{
+    padding: 4px 10px;
+    margin: 5px 0;
+}
