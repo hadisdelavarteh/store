@@ -4,8 +4,6 @@ import styles from './SignUp.module.css';
 import { validation } from '../../helper/validation';
 import { notify } from '../../helper/toast';
 import { ToastContainer } from 'react-toastify';
-import Header from '../headerComponent/Header';
-import Footer from '../footerComponent/Footer';
 
 const Login = () => {
 
@@ -45,7 +43,6 @@ const Login = () => {
 
     return (
         <>
-            <Header />
             <div className={styles.sign_up}>
 
                 <h1>Login</h1>
@@ -82,7 +79,7 @@ const Login = () => {
                     </div>
 
                     <div className={styles.forgetPassword}>
-                        <a href="#">Forget Password?</a>
+                        <Link to="/login">Forget Password?</Link>
                     </div>
                     <div className={styles.formButton}>
                         <Link to="/signup" className={styles.login}>Sign Up</Link>
@@ -93,7 +90,6 @@ const Login = () => {
                 <ToastContainer />
 
             </div>
-            <Footer />
         </>
     );
 };

@@ -1,13 +1,16 @@
-import  React, {useState} from 'react';
+import  React, {useContext, useState} from 'react';
 import {MdSearch, MdOutlineShoppingCart} from 'react-icons/md';
 import logo from '../../assets/image/logo.jpg';
 import { Link } from 'react-router-dom';
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 import styles from './headerMiddle.module.css';
 import HeaderBottom from './HeaderBottom';
+import { contextCart } from '../../contex/CartContextProvider';
 
 
 const HeaderMiddle = () => {
+
+    const {state} = useContext(contextCart);
     
     const [toggleMenu, setToggleMenu] = useState(false);
     const [toggleSearch, setToggleSearch] = useState(false);
@@ -51,7 +54,7 @@ const HeaderMiddle = () => {
                     }
                     <div className={styles.cart}>
                         <div>
-                            <span>0</span>
+                            <span>{state.numberItems}</span>
                         </div>
                         <Link to="/cart">
                             <MdOutlineShoppingCart />
