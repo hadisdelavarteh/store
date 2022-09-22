@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {contextCart} from '../../contex/CartContextProvider';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { shorter } from '../../helper/functions';
 
 const Card = ({product}) => {
 
@@ -11,7 +12,7 @@ const Card = ({product}) => {
                 <img style={{width:"200px"}} src={product.image} alt="product" />
             </div>
             <div>
-                <span>{product.title}</span>
+                <span>{shorter(product.title)}</span>
             </div>
             <div>
                 <span>{product.price}</span>

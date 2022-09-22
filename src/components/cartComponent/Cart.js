@@ -1,21 +1,23 @@
 import React, { useContext } from 'react';
-import Header from '../headerComponent/Header';
-import Footer from '../footerComponent/Footer';
 import Card from './Card';
 import {contextCart} from '../../contex/CartContextProvider';
+import CheckoutBox from './CheckoutBox';
 
 const Cart = () => {
 
-    const {state} = useContext(contextCart)
+    const {state} = useContext(contextCart);
     return (
         <div>
-            <Header />
             <div>
-                {!!state.selectedItems.length ? 
-                    state.selectedItems.map (item => <Card key={item.id} product={item} />) :
-                    <span>There is no product in the shopping cart</span>}
+                <div>
+                    {!!state.selectedItems.length ? 
+                        state.selectedItems.map (item => <Card key={item.id} product={item} />) :
+                        <span>There is no product in the shopping cart</span>}
+                </div>
+                <div>
+                    <CheckoutBox />
+                </div>
             </div>
-            <Footer />
         </div>
     );
 };

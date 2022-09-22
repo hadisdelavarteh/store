@@ -4,8 +4,6 @@ import styles from './SignUp.module.css';
 import { validation } from '../../helper/validation';
 import { notify } from '../../helper/toast';
 import { ToastContainer } from 'react-toastify';
-import Header from '../headerComponent/Header';
-import Footer from '../footerComponent/Footer';
 
 const SignUp = () => {
 
@@ -53,7 +51,6 @@ const SignUp = () => {
 
     return (
         <>
-            <Header />
             <div className={styles.sign_up}>
 
                 <h1>sign Up</h1>
@@ -127,7 +124,6 @@ const SignUp = () => {
                 </form>
                 <ToastContainer />
             </div>
-            <Footer />
         </>
         
     );

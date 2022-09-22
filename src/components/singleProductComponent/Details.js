@@ -8,7 +8,7 @@ import {contextCart} from '../../contex/CartContextProvider';
 
 const Details = ({product}) => {
 
-    const {state} = useContext(contextCart);
+    const {state, dispatch} = useContext(contextCart);
     const [counter, setCounter] = useState(!!numberQuantity(state, product.id) ? numberQuantity(state, product.id) : 1);
     const {title, description, category, price, image, rating:{rate, count}} = product;
 
@@ -38,7 +38,7 @@ const Details = ({product}) => {
                     </div>
                 </div>
                 <p> <span>price: </span> <span>{price} $</span>  </p>
-                <Link to="/cart">Add To Cart</Link>
+                <Link to="/cart" onClick={() => dispatch({type: "ADD_TO_CART", payload: product, counter: counter})}>Add To Cart</Link>
             </div>
         </div>
     );

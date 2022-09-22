@@ -27,4 +27,7 @@ const numberQuantity = (state, id) => {
   if(index>=0)
     return state.selectedItems[index].quantity;
 }
+
+
+
 export {shorter, selectedProduct, numberQuantity, oneOrGreater};
