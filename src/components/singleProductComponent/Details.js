@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useState, useContext} from 'react';
 import styles from './details.module.css';
 import {BsFillStarFill} from 'react-icons/bs';
-import Counter from '../Counter';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import { numberQuantity } from '../../helper/functions';
+import {contextCart} from '../../contex/CartContextProvider';
 
 const Details = ({product}) => {
 
+    const {state} = useContext(contextCart);
+    const [counter, setCounter] = useState(!!numberQuantity(state, product.id) ? numberQuantity(state, product.id) : 1);
     const {title, description, category, price, image, rating:{rate, count}} = product;
 
     return (
@@ -24,9 +29,16 @@ const Details = ({product}) => {
                 </div>
             </div>
             <div className={styles.box_card}>
-                <div> <span>number: </span> <Counter className={styles.counter}/> </div>
+                <div> 
+                    <span>number: </span>
+                    <div>
+                    <AiOutlinePlus onClick={() => setCounter((prevCounter) => prevCounter + 1)} />
+                    {counter}
+                    <AiOutlineMinus onClick={() => setCounter((prevCounter) => counter > 1 ? prevCounter - 1 : prevCounter)} />
+                    </div>
+                </div>
                 <p> <span>price: </span> <span>{price} $</span>  </p>
-                <button>View cart</button>
+                <Link to="/cart">Add To Cart</Link>
             </div>
         </div>
     );

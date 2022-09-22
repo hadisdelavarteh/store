@@ -71,6 +71,10 @@
     transform: translate(-50%, -50%);
 }
 
+.cart a{
+    color: var(--darkBlue);
+}
+
 .header_middle .nav{
     display: none;
 }
